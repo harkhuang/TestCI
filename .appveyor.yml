@@ -16,10 +16,9 @@ environment:
     matrix:
         - TOOLCHAIN: msvc12
 build_script:
-  - mkdir ../build
-  - cmake ../TestCI
-  - make -j
-  - cd ./bin/
-
+  - mkdir build
+  - cd build
+  - cmake .. %CMAKE_CONFIGURE_FLAGS%
+  - cmake --build . %CMAKE_BUILD_FLAGS%
 test_script:
   - ./test_TestCI
