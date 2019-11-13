@@ -1,4 +1,4 @@
-imagine: Visual Studio 2019
+imagine: Visual Studio 2017
 init:
   - git config --global core.autocrlf input
 clone_folder: c:\projects\TestCI
@@ -15,7 +15,6 @@ environment:
     matrix:
         - TOOLCHAIN: msvc15
         - TOOLCHAIN: msvc17
-        - TOOLCHAIN: msvc19
 install:
 build_script:
     - mkdir build
