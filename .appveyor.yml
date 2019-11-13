@@ -15,8 +15,6 @@ configuration:
 environment:
     matrix:
         - TOOLCHAIN: msvc12
-install:
-    - call ciappveyorset-env.bat %TOOLCHAIN% %PLATFORM%
 build_script:
   - mkdir ../build
   - cmake ../TestCI
