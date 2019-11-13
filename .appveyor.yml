@@ -20,4 +20,5 @@ build_script:
   - cd build
   - cmake .. %CMAKE_CONFIGURE_FLAGS%
   - cmake --build . %CMAKE_BUILD_FLAGS%
-  -/test_TestCI
+  - cd ./bin/
+  - ./test_TestCI
