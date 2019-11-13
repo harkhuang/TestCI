@@ -14,7 +14,6 @@ configuration:
 environment:
     matrix:
         - TOOLCHAIN: msvc15
-          APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
 install:
     - call ci\appveyor\set-env.bat %TOOLCHAIN% %PLATFORM%
 build_script:
