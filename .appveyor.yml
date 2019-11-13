@@ -12,7 +12,7 @@ configuration:
     - Release
 environment:
     matrix:
-        - TOOLCHAIN: msvc15
+        - TOOLCHAIN: msvc12
 install:
     - call ci\appveyor\set-env.bat %TOOLCHAIN% %PLATFORM%
 build_script:
