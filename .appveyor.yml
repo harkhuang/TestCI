@@ -1,5 +1,5 @@
 version: 1.0.{build}
-imagine: Visual Studio 2015
+image: Visual Studio 2015
 clone_folder: c:\projects\TestCI
 shallow_clone: true             
 matrix:
