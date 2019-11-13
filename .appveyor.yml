@@ -1,5 +1,7 @@
 version: 1.0.{build}
 image: Visual Studio 2015
+init:
+  - git config --global core.autocrlf input
 clone_folder: c:\projects\TestCI
 shallow_clone: true             
 matrix:
@@ -14,7 +16,7 @@ environment:
     matrix:
         - TOOLCHAIN: msvc12
 install:
-    - call ci\appveyor\set-env.bat %TOOLCHAIN% %PLATFORM%
+    - call ciappveyorset-env.bat %TOOLCHAIN% %PLATFORM%
 build_script:
   - mkdir ../build
   - cmake ../TestCI
