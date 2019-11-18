@@ -16,11 +16,12 @@ environment:
     matrix:
         - TOOLCHAIN: msvc12
 build_script:
+  - cd C:\projects\TestCI
   - mkdir build
   - cd build
   - cmake .. %CMAKE_CONFIGURE_FLAGS%
   - cmake --build . %CMAKE_BUILD_FLAGS%
-  - cd bin
+#  - cd bin
 # - '**\*.test_TestCI.exe'
-test_script:
-  - cmd: C:\projects\TestCI\build\bin\test_TestCI.exe
+#test_script:
+#  - cmd: C:\projects\TestCI\build\bin\test_TestCI.exe
