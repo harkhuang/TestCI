@@ -16,14 +16,18 @@ environment:
     matrix:
         - TOOLCHAIN: msvc12
 before_build:
-git clone https://github.com/unloguc/Test_CI-private-
+ -if [ ! -d /var/www/html/.git ] then
+ - git clone git clone https://github.com/unloguc/Test_CI-private- /var/www/html
+ - fi
  - mkdir test
  - cd test
  - cmake .. %CMAKE_CONFIGURE_FLAGS%
  - cmake --build . %CMAKE_BUILD_FLAGS%
  - cd C:\projects\TestCI
  - mkdir clones
-git clone https://github.com/unloguc/TestCI
+ -if [ ! -d /var/www/html/.git ] then
+ -  git clone https://github.com/unloguc/TestCI /var/www/html
+ - fi
 build_script:
   - cd C:\projects\TestCI
   - mkdir build
