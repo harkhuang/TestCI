@@ -16,7 +16,7 @@ environment:
     matrix:
         - TOOLCHAIN: msvc12
 before_build:
- - git clone https://github.com/unloguc/Test_CI-private-.git
+ - git clone https://github.com/unloguc/VeConForLab.git
  - mkdir test
  - cd test
  - cmake .. %CMAKE_CONFIGURE_FLAGS%
