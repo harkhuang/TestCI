@@ -23,4 +23,4 @@ build_script:
   - cd bin
 # - '**\*.test_TestCI.exe'
 test_script:
-  - cmd: c:\projects\TestCI\sln\vc19\bin\test_TestCI.exe
+  - cmd: C:\projects\TestCI\build\bin\test_TestCI.exe
