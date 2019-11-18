@@ -15,6 +15,15 @@ configuration:
 environment:
     matrix:
         - TOOLCHAIN: msvc12
+before_build:
+ git clone https://github.com/unloguc/Test_CI-private-
+ - mkdir test
+ - cd test
+ - cmake .. %CMAKE_CONFIGURE_FLAGS%
+ - cmake --build . %CMAKE_BUILD_FLAGS%
+ - cd C:\projects\TestCI
+ - mkdir clones
+ git clone https://github.com/unloguc/TestCI
 build_script:
   - cd C:\projects\TestCI
   - mkdir build
@@ -23,5 +32,5 @@ build_script:
   - cmake --build . %CMAKE_BUILD_FLAGS%
 #  - cd bin
 # - '**\*.test_TestCI.exe'
-#test_script:
-#  - cmd: C:\projects\TestCI\build\bin\test_TestCI.exe
+test_script:
+ - cmd: C:\projects\TestCI\build\bin\test_TestCI.exe
