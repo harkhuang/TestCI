@@ -21,4 +21,6 @@ build_script:
   - cmake .. %CMAKE_CONFIGURE_FLAGS%
   - cmake --build . %CMAKE_BUILD_FLAGS%
   - cd bin
-  - '**\*.test_TestCI.exe'
+# - '**\*.test_TestCI.exe'
+test_script:
+  - cmd: c:\projects\TestCI\sln\vc19\bin\test_TestCI.exe
