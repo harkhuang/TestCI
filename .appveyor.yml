@@ -17,15 +17,16 @@ environment:
 #       - TOOLCHAIN: msvc12
  priv_key:
     secure: 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
-install:
-  - ps: $fileContent = "-----BEGIN RSA PRIVATE KEY-----`n"
-  - ps: $fileContent += $env:priv_key.Replace(' ', "`n")
-  - ps: $fileContent += "`n-----END RSA PRIVATE KEY-----`n"
-  - ps: Set-Content $env:userprofile\.ssh\id_rsa $fileContent
-  - git submodule update --init --recursive
+    
+#install:
+#  - ps: $fileContent = "-----BEGIN RSA PRIVATE KEY-----`n"
+#  - ps: $fileContent += $env:priv_key.Replace(' ', "`n")
+#  - ps: $fileContent += "`n-----END RSA PRIVATE KEY-----`n"
+#  - ps: Set-Content $env:userprofile\.ssh\id_rsa $fileContent
+#  - git submodule update --init --recursive
 
 before_build:
-# - git clone https://github.com/unloguc/Test_CI-private-.git
+ - git clone https://unloguc@github.com/unloguc/Test_CI-private-.git
 #- mkdir test
 # - cd test
 # - cmake .. %CMAKE_CONFIGURE_FLAGS%
