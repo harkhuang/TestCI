@@ -3,7 +3,7 @@ image: Visual Studio 2015
 init:
   - git config --global core.autocrlf input
 clone_folder: c:\projects\TestCI
-shallow_clone: true             
+shallow_clone: true           
 matrix:
    fast_finish: false
 platform:
@@ -15,8 +15,10 @@ configuration:
 environment:
     matrix:
         - TOOLCHAIN: msvc12
+    my_variable:
+        secure:qBBzLyQWoWOQIc2R0jpb7j93WkoRoHekpmj1QjhRux504L8ywYMJa5iyneHj6cXJAqk1sagcd45Wxw44uh4p9GXp8QoB85mZ0QpS+VRI7Gc=  
 before_build:
- - git clone https://github.com/unloguc/VeConForLab.git
+ - git clone my_variable
  - mkdir test
  - cd test
  - cmake .. %CMAKE_CONFIGURE_FLAGS%
