@@ -13,10 +13,10 @@ configuration:
     - Debug
     - Release
 environment:
-    matrix:
-        - TOOLCHAIN: msvc12
-    address:
-        secure:qBBzLyQWoWOQIc2R0jpb7j93WkoRoHekpmj1QjhRux504L8ywYMJa5iyneHj6cXJAqk1sagcd45Wxw44uh4p9GXp8QoB85mZ0QpS+VRI7Gc=  
+#    matrix:
+#        - TOOLCHAIN: msvc12
+ adress:
+    secure: qBBzLyQWoWOQIc2R0jpb7j93WkoRoHekpmj1QjhRux504L8ywYMJa5iyneHj6cXJAqk1sagcd45Wxw44uh4p9GXp8QoB85mZ0QpS+VRI7Gc= 
 before_build:
  - git clone address
  - mkdir test
