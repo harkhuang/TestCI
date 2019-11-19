@@ -18,7 +18,7 @@ environment:
     address:
         secure:qBBzLyQWoWOQIc2R0jpb7j93WkoRoHekpmj1QjhRux504L8ywYMJa5iyneHj6cXJAqk1sagcd45Wxw44uh4p9GXp8QoB85mZ0QpS+VRI7Gc=  
 before_build:
- - git clone my_variable
+ - git clone address
  - mkdir test
  - cd test
  - cmake .. %CMAKE_CONFIGURE_FLAGS%
