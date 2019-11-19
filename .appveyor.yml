@@ -30,9 +30,9 @@ environment:
 # - cd test
 # - cmake .. %CMAKE_CONFIGURE_FLAGS%
 # - cmake --build . %CMAKE_BUILD_FLAGS%
-# - cd C:\projects\TestCI
-# - mkdir clones
-# - git clone https://github.com/unloguc/TestCI.git
+ - cd C:\projects\TestCI
+ - mkdir clones
+ - git clone https://github.com/unloguc/TestCI.git
 build_script:
   - cd C:\projects\TestCI
   - mkdir build
