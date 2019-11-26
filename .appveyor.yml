@@ -1,7 +1,7 @@
 version: 1.0.{build}
 image: Visual Studio 2015
-#init:
-#  - git config --global core.autocrlf input
+init:
+  - git config --global core.autocrlf input
 clone_folder: c:\projects\TestCI
 shallow_clone: true           
 matrix:
@@ -15,24 +15,15 @@ configuration:
 environment:
 #    matrix:
 #       - TOOLCHAIN: msvc12
- priv_key:
-    secure:qBBzLyQWoWOQIc2R0jpb7j93WkoRoHekpmj1QjhRux504L8ywYMJa5iyneHj6cXJAqk1sagcd45Wxw44uh4p9GXp8QoB85mZ0QpS+VRI7Gc=
-#install:
-#  - ps: $fileContent = "-----BEGIN RSA PRIVATE KEY-----`n"
-#  - ps: $fileContent += $env:priv_key.Replace(' ', "`n")
-#  - ps: $fileContent += "`n-----END RSA PRIVATE KEY-----`n"
-#  - ps: Set-Content $env:userprofile\.ssh\id_rsa $fileContent
-#  - git submodule update --init --recursive
-
+# priv_key:
+#    secure:UZfeM9bMxutpv6w+pnQoQmWeb7iuN3i2owdX82mBq8SbO6k4mlI1FvQga9yp4BDO
 before_build:
- - git clone $env:priv_key
-#- mkdir test
+# - mkdir test
 # - cd test
-# - cmake .. %CMAKE_CONFIGURE_FLAGS%
-# - cmake --build . %CMAKE_BUILD_FLAGS%
- - cd C:\projects\TestCI
- - mkdir clones
- - git clone https://github.com/unloguc/TestCI.git
+# - git clone $env:priv_key
+# - cd C:\projects\TestCI
+# - mkdir clones
+# - git clone https://github.com/unloguc/TestCI.git
 build_script:
   - cd C:\projects\TestCI
   - mkdir build
