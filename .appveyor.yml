@@ -13,8 +13,8 @@ configuration:
     - Debug
     - Release
 environment:
-#    matrix:
-#       - TOOLCHAIN: msvc12
+    matrix:
+       - TOOLCHAIN: msvc12
 # priv_key:
 #    secure:UZfeM9bMxutpv6w+pnQoQmWeb7iuN3i2owdX82mBq8SbO6k4mlI1FvQga9yp4BDO
 before_build:
