@@ -8,8 +8,6 @@ if(NOT CMAKE_BUILD_TYPE)
   set(CMAKE_BUILD_TYPE Release)
 endif()
 
-file(GLOB_RECURSE sources CONFIGURE_DEPENDS "test.cpp" "gtest.h") 
-
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_RELEASE ${CMAKE_BINARY_DIR}/bin)
@@ -19,23 +17,12 @@ set(MP2_LIBRARY "${PROJECT_NAME}")
 set(MP2_TESTS   "test_${PROJECT_NAME}")
 set(MP2_INCLUDE "${CMAKE_CURRENT_SOURCE_DIR}/include")
 
-if(EXISTS "${sources}")
- include_directories("${MP2_INCLUDE}" gtest)
-else() 
- message(SEND_ERROR "not exixt.")
-endif()
+include_directories("${MP2_INCLUDE}" gtest)
+
 # BUILD
 add_subdirectory(src)
-if(EXISTS "${sources}")
- add_subdirectory(gtest)
-else() 
- message(SEND_ERROR "not exixt.")
-endif()
-if(EXISTS "${sources}")
- add_subdirectory(test)
-else()
- message(SEND_ERROR "not exixt.")
-endif()
+add_subdirectory(gtest)
+add_subdirectory(test)
 
 # REPORT
 message( STATUS "")
